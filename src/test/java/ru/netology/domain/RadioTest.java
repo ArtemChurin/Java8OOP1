@@ -17,16 +17,17 @@ class RadioTest {
 
     @Test
     void shouldCountRadioStationsUp() {
-        Radio radio = new Radio (12);
+        Radio radio = new Radio(12);
         int station = 11;
         int expected = 0;
         radio.setCurrentRadioStation(station);
         radio.setNextRadioStation();
         assertEquals(expected, radio.getCurrentRadioStation());
     }
+
     @Test
     void shouldCountRadioStationsDown() {
-        Radio radio = new Radio (5);
+        Radio radio = new Radio(5);
         int station = 0;
         int expected = 4;
         radio.setCurrentRadioStation(station);
@@ -158,4 +159,4 @@ class RadioTest {
         radio.setCurrentVolume(volume);
         assertEquals(expected, radio.getCurrentVolume());
     }
-}}
+}
